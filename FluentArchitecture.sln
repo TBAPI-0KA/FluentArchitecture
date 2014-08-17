@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Core", "FluentArchitecture.Core\FluentArchitecture.Core.csproj", "{D819339A-C796-4774-B5DC-A6E5BF22C7F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.CryptSharp", "FluentArchitecture.CryptSharp\FluentArchitecture.CryptSharp.csproj", "{0F26172A-DF41-41D4-8E94-18C97910FB22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.EntityFramework", "FluentArchitecture.EntityFramework\FluentArchitecture.EntityFramework.csproj", "{5C16392B-C613-4E31-9683-09E6F249BE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.MVC", "FluentArchitecture.MVC\FluentArchitecture.MVC.csproj", "{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.WebAPI", "FluentArchitecture.WebAPI\FluentArchitecture.WebAPI.csproj", "{CCA14248-4F98-4BB9-A28E-3584FB909F96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{5EC9AA91-1896-4C48-9D92-D83CA95E7C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Demo.WebUI", "Demo\FluentArchitecture.Demo.WebUI\FluentArchitecture.Demo.WebUI.csproj", "{87F64789-A43B-4D52-A2C1-5940DF2093C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Demo.WebAPI", "Demo\FluentArchitecture.Demo.WebAPI\FluentArchitecture.Demo.WebAPI.csproj", "{BA25475C-1921-4759-A9BF-D506FA838BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Web", "FluentArchitecture.Web\FluentArchitecture.Web.csproj", "{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Autofac", "FluentArchitecture.Autofac\FluentArchitecture.Autofac.csproj", "{D82F08CA-E3A5-43A7-B27A-042AB3467481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Autofac.Web", "FluentArchitecture.Autofac.Web\FluentArchitecture.Autofac.Web.csproj", "{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{A7D1821A-7BF9-4764-AEB5-B9581BD45A7F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D819339A-C796-4774-B5DC-A6E5BF22C7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D819339A-C796-4774-B5DC-A6E5BF22C7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D819339A-C796-4774-B5DC-A6E5BF22C7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D819339A-C796-4774-B5DC-A6E5BF22C7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F26172A-DF41-41D4-8E94-18C97910FB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F26172A-DF41-41D4-8E94-18C97910FB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F26172A-DF41-41D4-8E94-18C97910FB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F26172A-DF41-41D4-8E94-18C97910FB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C16392B-C613-4E31-9683-09E6F249BE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C16392B-C613-4E31-9683-09E6F249BE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C16392B-C613-4E31-9683-09E6F249BE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C16392B-C613-4E31-9683-09E6F249BE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA14248-4F98-4BB9-A28E-3584FB909F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA14248-4F98-4BB9-A28E-3584FB909F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA14248-4F98-4BB9-A28E-3584FB909F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA14248-4F98-4BB9-A28E-3584FB909F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F64789-A43B-4D52-A2C1-5940DF2093C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F64789-A43B-4D52-A2C1-5940DF2093C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F64789-A43B-4D52-A2C1-5940DF2093C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F64789-A43B-4D52-A2C1-5940DF2093C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA25475C-1921-4759-A9BF-D506FA838BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA25475C-1921-4759-A9BF-D506FA838BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA25475C-1921-4759-A9BF-D506FA838BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA25475C-1921-4759-A9BF-D506FA838BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82F08CA-E3A5-43A7-B27A-042AB3467481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82F08CA-E3A5-43A7-B27A-042AB3467481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82F08CA-E3A5-43A7-B27A-042AB3467481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82F08CA-E3A5-43A7-B27A-042AB3467481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87F64789-A43B-4D52-A2C1-5940DF2093C0} = {5EC9AA91-1896-4C48-9D92-D83CA95E7C86}
+		{BA25475C-1921-4759-A9BF-D506FA838BE7} = {5EC9AA91-1896-4C48-9D92-D83CA95E7C86}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FluentArchitecture.Demo.WebAPI.WebApiApplication" Language="C#" %>
