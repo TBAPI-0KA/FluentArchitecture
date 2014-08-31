@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Infrastructure\AutofacHttpApplication.cs" />
     <Compile Include="Infrastructure\IAutofacRegistrationTask.cs" />
-    <Compile Include="Infrastructure\IAutofacResolutionTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +62,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

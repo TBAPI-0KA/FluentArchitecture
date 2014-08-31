@@ -7,10 +7,14 @@
 /Demo/FluentArchitecture.Demo.WebAPI/obj
 /Demo/FluentArchitecture.Demo.WebUI/bin
 /Demo/FluentArchitecture.Demo.WebUI/obj
-/FluentArchitecture.Autofac.Web/bin
-/FluentArchitecture.Autofac.Web/obj
 /FluentArchitecture.Autofac/bin
 /FluentArchitecture.Autofac/obj
+/FluentArchitecture.Autofac.MVC/bin
+/FluentArchitecture.Autofac.MVC/obj
+/FluentArchitecture.Autofac.Web/bin
+/FluentArchitecture.Autofac.Web/obj
+/FluentArchitecture.Autofac.WebAPI/bin
+/FluentArchitecture.Autofac.WebAPI/obj
 /FluentArchitecture.Core/bin
 /FluentArchitecture.Core/obj
 /FluentArchitecture.CryptSharp/bin

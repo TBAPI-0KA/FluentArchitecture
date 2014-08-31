@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Practices.ServiceLocation;
 
 namespace FluentArchitecture.DependencyInjection
 {
@@ -8,7 +9,7 @@ namespace FluentArchitecture.DependencyInjection
 
 		void Register(Type type);
 
-		IDependencyInjectionResolutionContext<TContainer> Build<TContainer>() where TContainer : class;
+		IServiceLocator Build();
 
 		TRegistration Registration { get; }
 	}

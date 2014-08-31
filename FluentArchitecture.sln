@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Autofac.MVC", "FluentArchitecture.Autofac.MVC\FluentArchitecture.Autofac.MVC.csproj", "{15988916-94C7-47B4-BAE2-3CAFA1243BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentArchitecture.Autofac.WebAPI", "FluentArchitecture.Autofac.WebAPI\FluentArchitecture.Autofac.WebAPI.csproj", "{98723FB4-F24D-4F64-99E3-EA693F3052EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15988916-94C7-47B4-BAE2-3CAFA1243BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15988916-94C7-47B4-BAE2-3CAFA1243BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15988916-94C7-47B4-BAE2-3CAFA1243BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15988916-94C7-47B4-BAE2-3CAFA1243BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98723FB4-F24D-4F64-99E3-EA693F3052EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98723FB4-F24D-4F64-99E3-EA693F3052EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98723FB4-F24D-4F64-99E3-EA693F3052EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98723FB4-F24D-4F64-99E3-EA693F3052EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

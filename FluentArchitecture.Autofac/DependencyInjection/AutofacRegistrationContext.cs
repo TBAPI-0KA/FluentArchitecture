@@ -1,5 +1,7 @@
 ﻿using System;
 using Autofac;
+using Autofac.Extras.CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 
 namespace FluentArchitecture.DependencyInjection
 {
@@ -22,10 +24,10 @@ namespace FluentArchitecture.DependencyInjection
 			_builder.RegisterType(type);
 		}
 
-		public IDependencyInjectionResolutionContext<TContainer> Build<TContainer>() where TContainer : class
+		public IServiceLocator Build()
 		{
 			IContainer container = _builder.Build();
-			return (IDependencyInjectionResolutionContext<TContainer>)new AutofacResolutionContext(container);
+			return new AutofacServiceLocator(container);
 		}
 
 		public ContainerBuilder Registration

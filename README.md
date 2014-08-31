@@ -81,7 +81,12 @@ Mapper
 TBD
 
 Fluent data annotations
------------------
+-----------------------
+
+TBD
+
+Localization
+-----------------------
 
 TBD
 

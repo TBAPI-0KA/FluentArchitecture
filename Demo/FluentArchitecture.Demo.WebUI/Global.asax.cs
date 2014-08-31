@@ -1,4 +1,5 @@
 ﻿using FluentArchitecture.Demo.WebUI.Infrastructure.AfterStartupTasks;
+using FluentArchitecture.MVC.Infrastructure.AfterStartupTasks;
 using FluentArchitecture.Web.Infrastructure;
 
 namespace FluentArchitecture.Demo.WebUI
@@ -7,9 +8,9 @@ namespace FluentArchitecture.Demo.WebUI
 	{
 		protected MvcApplication()
 		{
-			AfterStartupTask<RegisterAreas>();
-			AfterStartupTask<RegisterRoutes>();
 			AfterStartupTask<InitializeDependencyResolver>();
+			AfterStartupTask<RegisterAllAreas>();
+			AfterStartupTask<RegisterRoutes>();
 		}
 	}
 }

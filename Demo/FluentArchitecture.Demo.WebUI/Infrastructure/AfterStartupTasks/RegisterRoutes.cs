@@ -1,14 +1,12 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using Autofac;
-using FluentArchitecture.DependencyInjection;
 using FluentArchitecture.Web.Infrastructure;
 
 namespace FluentArchitecture.Demo.WebUI.Infrastructure.AfterStartupTasks
 {
-	public class RegisterRoutes : IAutofacResolutionTask
+	public class RegisterRoutes : IWebTask
 	{
-		public void Run(IDependencyInjectionResolutionContext<IContainer> context)
+		public void Run()
 		{
 			RouteCollection routes = RouteTable.Routes;
 

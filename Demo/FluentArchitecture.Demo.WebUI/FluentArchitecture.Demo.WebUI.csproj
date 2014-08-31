@@ -102,8 +102,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\AfterStartupTasks\InitializeDependencyResolver.cs" />
-    <Compile Include="Infrastructure\AfterStartupTasks\RegisterAreas.cs" />
     <Compile Include="Infrastructure\AfterStartupTasks\RegisterRoutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +123,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\FluentArchitecture.Autofac.MVC\FluentArchitecture.Autofac.MVC.csproj">
+      <Project>{15988916-94C7-47B4-BAE2-3CAFA1243BD4}</Project>
+      <Name>FluentArchitecture.Autofac.MVC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\FluentArchitecture.Autofac.Web\FluentArchitecture.Autofac.Web.csproj">
       <Project>{232869FC-CFBA-4C86-9EBF-83C59B1EEE66}</Project>
       <Name>FluentArchitecture.Autofac.Web</Name>
@@ -136,6 +138,10 @@
     <ProjectReference Include="..\..\FluentArchitecture.Core\FluentArchitecture.Core.csproj">
       <Project>{D819339A-C796-4774-B5DC-A6E5BF22C7F5}</Project>
       <Name>FluentArchitecture.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FluentArchitecture.MVC\FluentArchitecture.MVC.csproj">
+      <Project>{8BDE7290-08E4-46C5-9C65-4813DCC4CD87}</Project>
+      <Name>FluentArchitecture.MVC</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\FluentArchitecture.Web\FluentArchitecture.Web.csproj">
       <Project>{DB4385F5-0953-49C3-AF9E-8B4880F3EF69}</Project>

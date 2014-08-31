@@ -1,12 +1,11 @@
 ﻿using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using FluentArchitecture.DependencyInjection;
 using FluentArchitecture.Web.Infrastructure;
 
-namespace FluentArchitecture.Demo.WebUI.Infrastructure.AfterStartupTasks
+namespace FluentArchitecture.MVC.Infrastructure.AfterStartupTasks
 {
-	public class InitializeDependencyResolver : IAutofacResolutionTask
+	public class InitializeDependencyResolver : IWebTask
 	{
 		private readonly ILifetimeScope _lifetimeScope;
 
@@ -15,7 +14,7 @@ namespace FluentArchitecture.Demo.WebUI.Infrastructure.AfterStartupTasks
 			_lifetimeScope = lifetimeScope;
 		}
 
-		public void Run(IDependencyInjectionResolutionContext<IContainer> context)
+		public void Run()
 		{
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(_lifetimeScope));
 		}

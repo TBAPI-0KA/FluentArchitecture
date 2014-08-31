@@ -1,5 +1,6 @@
 ﻿using FluentArchitecture.Demo.WebAPI.Infrastructure.AfterStartupTasks;
 using FluentArchitecture.Web.Infrastructure;
+using FluentArchitecture.WebAPI.Infrastructure.AfterStartupTasks;
 
 namespace FluentArchitecture.Demo.WebAPI
 {

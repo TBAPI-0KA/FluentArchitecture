@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FluentArchitecture.DependencyInjection;
+using Microsoft.Practices.ServiceLocation;
 
 namespace FluentArchitecture.Web.Infrastructure
 {
-	public abstract class FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> : HttpApplication
+	public abstract class FluentHttpApplication<TRegistrationContext, TRegistration> : HttpApplication
 		where TRegistrationContext : IDependencyInjectionRegistrationContext<TRegistration>, new()
-		where TResolutionContext : class, IDependencyInjectionResolutionContext<TContainer>
 		where TRegistration : class
-		where TContainer : class
 	{
 		#region Initialization
 
 		private readonly TRegistrationContext _registrationContext;
-		private TResolutionContext _resolutionContext;
+		private IServiceLocator _serviceLocator;
 
 		private readonly List<Type> _startupTasks;
 
@@ -66,109 +65,109 @@ namespace FluentArchitecture.Web.Infrastructure
 
 		#region Task registration methods
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> StartupTask<T>() where T : IRegistrationTask<TRegistration>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> StartupTask<T>() where T : IWebRegistrationTask<TRegistration>
 		{
 			_startupTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> AfterStartupTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> AfterStartupTask<T>() where T : IWebTask
 		{
 			_afterStartupTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> BeginRequestTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> BeginRequestTask<T>() where T : IWebTask
 		{
 			_beginRequestTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> AuthenticateRequestTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> AuthenticateRequestTask<T>() where T : IWebTask
 		{
 			_authenticateRequestTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> AuthorizeRequestTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> AuthorizeRequestTask<T>() where T : IWebTask
 		{
 			_authorizeRequestTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> ResolveRequestCacheTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> ResolveRequestCacheTask<T>() where T : IWebTask
 		{
 			_resolveRequestCacheTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> SessionStartTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> SessionStartTask<T>() where T : IWebTask
 		{
 			_sessionStartTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> AcquireRequestStateTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> AcquireRequestStateTask<T>() where T : IWebTask
 		{
 			_acquireRequestStateTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> PreRequestHandlerExecuteTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> PreRequestHandlerExecuteTask<T>() where T : IWebTask
 		{
-			_preRequestHandlerExecuteTasks.Add(typeof(T));
+			_preRequestHandlerExecuteTasks.Add(typeof (T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> PostRequestHandlerExecuteTasks<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> PostRequestHandlerExecuteTasks<T>() where T : IWebTask
 		{
-			_postRequestHandlerExecuteTasks.Add(typeof(T));
+			_postRequestHandlerExecuteTasks.Add(typeof (T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> ReleaseRequestStateTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> ReleaseRequestStateTask<T>() where T : IWebTask
 		{
 			_releaseRequestStateTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> UpdateRequestCacheTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> UpdateRequestCacheTask<T>() where T : IWebTask
 		{
 			_updateRequestCacheTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> EndRequestTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> EndRequestTask<T>() where T : IWebTask
 		{
 			_endRequestTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> PreSendRequestHeadersTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> PreSendRequestHeadersTask<T>() where T : IWebTask
 		{
 			_preSendRequestHeadersTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> PreSendRequestContentTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> PreSendRequestContentTask<T>() where T : IWebTask
 		{
 			_preSendRequestContentTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> SessionEndTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> SessionEndTask<T>() where T : IWebTask
 		{
 			_sessionEndTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> DisposalTask<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> DisposalTask<T>() where T : IWebTask
 		{
 			_disposalTasks.Add(typeof(T));
 			return this;
 		}
 
-		public FluentHttpApplication<TRegistrationContext, TResolutionContext, TRegistration, TContainer> ShutdownTasks<T>() where T : IResolutionTask<TContainer>
+		public FluentHttpApplication<TRegistrationContext, TRegistration> ShutdownTasks<T>() where T : IWebTask
 		{
 			_shutdownTasks.Add(typeof(T));
 			return this;
@@ -178,7 +177,7 @@ namespace FluentArchitecture.Web.Infrastructure
 
 		protected void Application_Start(object sender, EventArgs e)
 		{
-			foreach (IRegistrationTask<TRegistration> startupTask in _startupTasks.Select(startupTaskType => Activator.CreateInstance(startupTaskType) as IRegistrationTask<TRegistration>))
+			foreach (IWebRegistrationTask<TRegistration> startupTask in _startupTasks.Select(startupTaskType => Activator.CreateInstance(startupTaskType) as IWebRegistrationTask<TRegistration>))
 			{
 				startupTask.Run(_registrationContext);
 			}
@@ -186,7 +185,8 @@ namespace FluentArchitecture.Web.Infrastructure
 			RegisterResolutionTasksList(_afterStartupTasks);
 			RegisterResolutionTasksList(_authenticateRequestTasks);
 
-			_resolutionContext = (TResolutionContext) _registrationContext.Build<TContainer>();
+			_serviceLocator = _registrationContext.Build();
+			ServiceLocator.SetLocatorProvider(() => _serviceLocator);
 
 			RunResolutionTasksList(_afterStartupTasks);
 		}
@@ -285,9 +285,9 @@ namespace FluentArchitecture.Web.Infrastructure
 
 		private void RunResolutionTasksList(IEnumerable<Type> list)
 		{
-			foreach (IResolutionTask<TContainer> resolutionTask in list.Select(afterStartupTaskType => _resolutionContext.Resolve(afterStartupTaskType)))
+			foreach (IWebTask resolutionTask in list.Select(afterStartupTaskType => _serviceLocator.GetInstance(afterStartupTaskType)))
 			{
-				resolutionTask.Run(_resolutionContext);
+				resolutionTask.Run();
 			}
 		}
 	}
