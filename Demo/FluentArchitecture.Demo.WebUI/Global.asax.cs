@@ -9,6 +9,7 @@ namespace FluentArchitecture.Demo.WebUI
 		{
 			AfterStartupTask<RegisterAreas>();
 			AfterStartupTask<RegisterRoutes>();
+			AfterStartupTask<InitializeDependencyResolver>();
 		}
 	}
 }

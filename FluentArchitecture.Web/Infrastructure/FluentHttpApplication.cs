@@ -187,7 +187,6 @@ namespace FluentArchitecture.Web.Infrastructure
 			RegisterResolutionTasksList(_authenticateRequestTasks);
 
 			_resolutionContext = (TResolutionContext) _registrationContext.Build<TContainer>();
-			//DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
 			RunResolutionTasksList(_afterStartupTasks);
 		}

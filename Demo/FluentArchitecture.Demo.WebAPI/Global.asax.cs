@@ -9,6 +9,7 @@ namespace FluentArchitecture.Demo.WebAPI
 		{
 			AfterStartupTask<RegisterRoutes>();
 			AfterStartupTask<CompleteInitialization>();
+			AfterStartupTask<InitializeDependencyResolver>();
 		}
 	}
 }
